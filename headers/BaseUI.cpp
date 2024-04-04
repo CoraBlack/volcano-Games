@@ -29,11 +29,9 @@ void BaseUI::WaitsForKeyPress(){
         for(auto i : this->operations){
 
             if (i.key == key && i.func != nullptr){
-                i.func();
-                flag = false;
-                break;
+                return i.func();
             }
-            
+
         }
     }
 }
